@@ -1,0 +1,24 @@
+{
+  "name": "genesis-task-ledger",
+  "version": "1.0.0",
+  "description": "Credit outcomes with current artifact and review evidence.",
+  "main": "index.cjs",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node examples/demo.cjs"
+  },
+  "license": "MIT",
+  "author": "Genesis Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wassimyounes01/genesis-task-ledger.git"
+  },
+  "homepage": "https://github.com/Wassimyounes01/genesis-task-ledger#readme",
+  "bugs": {
+    "url": "https://github.com/Wassimyounes01/genesis-task-ledger/issues"
+  }
+}

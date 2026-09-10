@@ -1,0 +1,21 @@
+{
+  "name": "genesis-task-ledger",
+  "node": ">=20",
+  "exports": {
+    "TaskLedger": "class",
+    "createLedger": "function",
+    "sha256": "function",
+    "digest": "function",
+    "checksDigest": "function",
+    "artifactsDigest": "function"
+  },
+  "integration": {
+    "stateDir": "required caller-supplied directory",
+    "artifactRoot": "required caller-supplied directory",
+    "reviewer": "{id, taskId, acceptanceDigest, configured:true, independent:true, verdict:'accept', checksDigest, artifactsDigest}; id must differ from workerId and task binding must match",
+    "artifactProof": "{path, sha256}",
+    "check": "{taskId,acceptanceDigest,criterionId,checkId,passed:true,command,exitCode:0,checkedCount,expectedCount,artifacts:[artifactProof],revisionId?}; taskId/acceptanceDigest must match the registered task, checkedCount must equal expectedCount and artifacts must exactly match outcome artifacts",
+    "outcome": "{taskId, workerId, checks:[check], artifacts:[artifactProof], reviewer, completedAt?}"
+  },
+  "limitations": ["Reviewer identity is caller-attested, not cryptographically authenticated.", "State is local and synchronous; use an external lock for multi-process writers."]
+}
