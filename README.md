@@ -1,4 +1,4 @@
-![Task Ledger](docs/cover.svg)
+![Task Ledger](docs/cover.svg?design=2)
 
 # genesis-task-ledger
 
